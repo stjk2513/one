@@ -1,6 +1,6 @@
 import { describe, it, expect } from "vitest";
 import { INCREMENT } from "../constants";
-import { increment } from "./index";
+import { increment } from "./counterActions";
 
 describe("counter actions", () => {
   it("increment action returns INCREMENT type", () => {
