@@ -2,7 +2,7 @@ import { describe, it, expect } from "vitest";
 import { render, screen, fireEvent } from "@testing-library/react";
 import { Provider } from "react-redux";
 import { legacy_createStore as createStore } from "redux";
-import rootReducer from "../../store/rootReducer";
+import rootReducer from "../../../store/rootReducer";
 import CounterContainer from "./CounterContainer";
 
 const renderWithStore = (initialState) => {

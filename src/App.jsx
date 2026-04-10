@@ -1,6 +1,6 @@
 import { Routes, Route } from "react-router-dom";
 import "./App.css";
-import CounterContainer from "./counter/components/CounterContainer";
+import CounterContainer from "./components/counter/components/CounterContainer";
 import TopNav from "./components/TopNav";
 
 function Home() {
