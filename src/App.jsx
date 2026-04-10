@@ -1,6 +1,7 @@
-import { Routes, Route, Link } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import "./App.css";
 import CounterContainer from "./counter/components/CounterContainer";
+import TopNav from "./components/TopNav";
 
 function Home() {
   return <h1>Home</h1>;
@@ -9,9 +10,7 @@ function Home() {
 function App() {
   return (
     <div>
-      <nav>
-        <Link to="/">Home</Link> | <Link to="/counter">Counter</Link>
-      </nav>
+      <TopNav />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/counter" element={<CounterContainer />} />
