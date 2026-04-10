@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import { INCREMENT } from "../constants";
+import { INCREMENT, DECREMENT } from "../constants";
 import counterReducer from "./counterReducer";
 
 describe("counterReducer", () => {
@@ -13,6 +13,13 @@ describe("counterReducer", () => {
     const action = { type: INCREMENT };
     const result = counterReducer(initialState, action);
     expect(result.count).toBe(1);
+  });
+
+  it("handles DECREMENT action", () => {
+    const initialState = { count: 5 };
+    const action = { type: DECREMENT };
+    const result = counterReducer(initialState, action);
+    expect(result.count).toBe(4);
   });
 
   it("returns current state for unknown action", () => {

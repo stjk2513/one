@@ -30,4 +30,12 @@ describe("CounterContainer", () => {
 
     expect(store.getState().counter.count).toBe(1);
   });
+
+  it("dispatches decrement action when button is clicked", () => {
+    const { store } = renderWithStore({ counter: { count: 5 } });
+
+    fireEvent.click(screen.getByText("Decrement"));
+
+    expect(store.getState().counter.count).toBe(4);
+  });
 });

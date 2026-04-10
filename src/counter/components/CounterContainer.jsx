@@ -1,5 +1,5 @@
 import { useSelector, useDispatch } from "react-redux";
-import { increment } from "../actions/counterActions";
+import { increment, decrement } from "../actions/counterActions";
 import CounterView from "./CounterView";
 
 const CounterContainer = () => {
@@ -10,7 +10,11 @@ const CounterContainer = () => {
     dispatch(increment());
   };
 
-  return <CounterView count={count} onIncrement={handleIncrement} />;
+  const handleDecrement = () => {
+    dispatch(decrement());
+  };
+
+  return <CounterView count={count} onIncrement={handleIncrement} onDecrement={handleDecrement} />;
 };
 
 export default CounterContainer;
